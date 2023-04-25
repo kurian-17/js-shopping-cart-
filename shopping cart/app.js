@@ -1,3 +1,4 @@
+
 const cartBtn = document.querySelector(".cart-btn");
 const closeCartBtn = document.querySelector(".close-cart");
 const clearCart = document.querySelector(".clear-cart");
