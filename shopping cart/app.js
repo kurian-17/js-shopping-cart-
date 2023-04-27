@@ -32,18 +32,13 @@ class Product {
       let contentful = await client.getEntries({
         content_type: 'product'
       })
-      // console.log(contentful);
-
+      
       let result = await fetch("products.json");
       let data = await result.json();
-
-      // let products = contentful.items
-
-
-
-
-
-      let products = data.items;
+      
+      let products = contentful.items
+    
+      // let products = data.items;
 
       products = products.map((item) => {
 
@@ -118,7 +113,7 @@ class UI {
         
         this.showCart()
         
-        this.addCartItem( cart )
+        this.addCartItem( cartItem )
       });
     });
   }
@@ -144,7 +139,6 @@ class UI {
 
     let div = document.createElement('div')
     div.classList.add('cart-item')
-    console.log(item.image);
     div.innerHTML += `
         <img src=${item.image} alt=" image">
         <div>
